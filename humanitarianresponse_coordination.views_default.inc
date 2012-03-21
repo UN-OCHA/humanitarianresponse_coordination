@@ -115,18 +115,6 @@ function humanitarianresponse_coordination_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['coordination_hubs'] = array(
-    t('Master'),
-    t('Coordination Hubs'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Page'),
-    t('Block'),
-  );
   $export['coordination_hubs'] = $view;
 
   return $export;
