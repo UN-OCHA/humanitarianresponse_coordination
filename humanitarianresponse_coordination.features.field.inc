@@ -49,7 +49,7 @@ function humanitarianresponse_coordination_field_default_fields() {
             'use_widget_handlers' => 1,
           ),
           'type' => 'addressfield_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'taxonomy_term',
@@ -103,7 +103,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => 2,
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'taxonomy_term',
@@ -169,7 +169,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 3,
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'taxonomy_term',
@@ -185,6 +185,75 @@ function humanitarianresponse_coordination_field_default_fields() {
         'settings' => array(),
         'type' => 'options_select',
         'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_map'
+  $fields['taxonomy_term-coordination_hubs-field_hub_map'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_hub_map',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'geofield',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'geofield',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coordination_hubs',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'geofield',
+          'settings' => array(
+            'data' => 'full',
+            'map_preset' => 'humanitarianresponse_geofield_formatter',
+          ),
+          'type' => 'geofield_openlayers',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_hub_map',
+      'label' => 'Map',
+      'required' => 0,
+      'settings' => array(
+        'local_solr' => array(
+          'enabled' => FALSE,
+          'lat_field' => 'lat',
+          'lng_field' => 'lng',
+        ),
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'geocoder',
+        'settings' => array(
+          'delta_handling' => 'default',
+          'geocoder_field' => 'field_hub_address',
+          'geocoder_handler' => 'google',
+          'handler_settings' => array(
+            'google' => array(
+              'all_results' => 0,
+              'geometry_type' => 'point',
+              'reject_results' => array(
+                'APPROXIMATE' => 0,
+                'GEOMETRIC_CENTER' => 0,
+                'RANGE_INTERPOLATED' => 0,
+                'ROOFTOP' => 0,
+              ),
+            ),
+          ),
+        ),
+        'type' => 'geocoder',
+        'weight' => '31',
       ),
     ),
   );
@@ -228,7 +297,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'taxonomy_term',
@@ -256,6 +325,7 @@ function humanitarianresponse_coordination_field_default_fields() {
   t('Address');
   t('Email');
   t('Location');
+  t('Map');
   t('Telephone');
 
   return $fields;
