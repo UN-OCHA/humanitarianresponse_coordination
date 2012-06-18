@@ -9,6 +9,7 @@ dependencies[] = features
 dependencies[] = geocoder
 dependencies[] = humanitarianresponse_locations
 dependencies[] = humanitarianresponse_mapping
+dependencies[] = i18n_taxonomy
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy

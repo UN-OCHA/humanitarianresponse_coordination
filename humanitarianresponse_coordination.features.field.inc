@@ -10,7 +10,7 @@
 function humanitarianresponse_coordination_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_address'
+  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_address'.
   $fields['taxonomy_term-coordination_hubs-field_hub_address'] = array(
     'field_config' => array(
       'active' => '1',
@@ -20,6 +20,7 @@ function humanitarianresponse_coordination_field_default_fields() {
       'field_name' => 'field_hub_address',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'addressfield',
       'settings' => array(),
       'translatable' => '0',
@@ -77,7 +78,7 @@ function humanitarianresponse_coordination_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_email'
+  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_email'.
   $fields['taxonomy_term-coordination_hubs-field_hub_email'] = array(
     'field_config' => array(
       'active' => '1',
@@ -87,6 +88,7 @@ function humanitarianresponse_coordination_field_default_fields() {
       'field_name' => 'field_hub_email',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'email',
       'settings' => array(),
       'translatable' => '0',
@@ -125,7 +127,7 @@ function humanitarianresponse_coordination_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_location'
+  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_location'.
   $fields['taxonomy_term-coordination_hubs-field_hub_location'] = array(
     'field_config' => array(
       'active' => '1',
@@ -146,6 +148,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -154,6 +157,7 @@ function humanitarianresponse_coordination_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -189,7 +193,7 @@ function humanitarianresponse_coordination_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_map'
+  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_map'.
   $fields['taxonomy_term-coordination_hubs-field_hub_map'] = array(
     'field_config' => array(
       'active' => '1',
@@ -199,6 +203,7 @@ function humanitarianresponse_coordination_field_default_fields() {
       'field_name' => 'field_hub_map',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'geofield',
       'settings' => array(),
       'translatable' => '0',
@@ -258,7 +263,7 @@ function humanitarianresponse_coordination_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_phone'
+  // Exported field: 'taxonomy_term-coordination_hubs-field_hub_phone'.
   $fields['taxonomy_term-coordination_hubs-field_hub_phone'] = array(
     'field_config' => array(
       'active' => '1',
@@ -279,6 +284,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
