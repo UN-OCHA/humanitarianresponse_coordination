@@ -213,6 +213,24 @@ function humanitarianresponse_coordination_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
   $handler->display->display_options['fields']['name']['convert_spaces'] = 0;
+  $translatables['coordination_hubs'] = array(
+    t('Master'),
+    t('Coordination Hubs'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('There are no coordination hubs'),
+    t('Name'),
+    t('Telephone'),
+    t('Email'),
+    t('Location'),
+    t('Address'),
+    t('Page'),
+    t('Block'),
+  );
   $export['coordination_hubs'] = $view;
 
   return $export;
