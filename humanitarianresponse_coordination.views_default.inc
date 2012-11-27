@@ -232,7 +232,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination/coordination-hubs/xls';
+  $handler->display->display_options['path'] = 'coordination/coordination-hubs.xls';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -354,7 +354,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination/coordination-hubs/xml';
+  $handler->display->display_options['path'] = 'coordination/coordination-hubs.xml';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
