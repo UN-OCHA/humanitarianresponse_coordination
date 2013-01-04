@@ -22,7 +22,6 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[feeds_importer][] = csv_coordination_hubs
-features[field][] = taxonomy_term-coordination_hubs-description_field
 features[field][] = taxonomy_term-coordination_hubs-field_hub_address
 features[field][] = taxonomy_term-coordination_hubs-field_hub_email
 features[field][] = taxonomy_term-coordination_hubs-field_hub_location
