@@ -14,8 +14,8 @@ function humanitarianresponse_coordination_user_default_permissions() {
   $permissions['administer coordination_hubs vocabulary terms'] = array(
     'name' => 'administer coordination_hubs vocabulary terms',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'vppr',
   );
@@ -24,8 +24,8 @@ function humanitarianresponse_coordination_user_default_permissions() {
   $permissions['clear csv_coordination_hubs feeds'] = array(
     'name' => 'clear csv_coordination_hubs feeds',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -34,8 +34,8 @@ function humanitarianresponse_coordination_user_default_permissions() {
   $permissions['import csv_coordination_hubs feeds'] = array(
     'name' => 'import csv_coordination_hubs feeds',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -44,8 +44,8 @@ function humanitarianresponse_coordination_user_default_permissions() {
   $permissions['unlock csv_coordination_hubs feeds'] = array(
     'name' => 'unlock csv_coordination_hubs feeds',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
