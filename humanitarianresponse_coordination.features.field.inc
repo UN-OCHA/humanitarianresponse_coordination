@@ -409,7 +409,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
