@@ -66,8 +66,8 @@ function humanitarianresponse_coordination_field_default_fields() {
       'label' => 'Address',
       'required' => 1,
       'settings' => array(
-        'user_register_form' => FALSE,
         'entity_translation_sync' => FALSE,
+        'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -130,8 +130,8 @@ function humanitarianresponse_coordination_field_default_fields() {
       'label' => 'Email',
       'required' => 1,
       'settings' => array(
-        'user_register_form' => FALSE,
         'entity_translation_sync' => FALSE,
+        'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -176,6 +176,7 @@ function humanitarianresponse_coordination_field_default_fields() {
           ),
           'entity_translation_sync' => FALSE,
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -205,8 +206,8 @@ function humanitarianresponse_coordination_field_default_fields() {
       'label' => 'Location',
       'required' => 1,
       'settings' => array(
-        'user_register_form' => FALSE,
         'entity_translation_sync' => FALSE,
+        'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -263,13 +264,13 @@ function humanitarianresponse_coordination_field_default_fields() {
       'label' => 'Map',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'local_solr' => array(
           'enabled' => FALSE,
           'lat_field' => 'lat',
           'lng_field' => 'lng',
         ),
         'user_register_form' => FALSE,
-        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -321,8 +322,8 @@ function humanitarianresponse_coordination_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'max_length' => '255',
         'entity_translation_sync' => FALSE,
+        'max_length' => '255',
       ),
       'translatable' => '0',
       'type' => 'text',
@@ -352,9 +353,9 @@ function humanitarianresponse_coordination_field_default_fields() {
       'label' => 'Telephone',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
-        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -392,8 +393,8 @@ function humanitarianresponse_coordination_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'max_length' => 255,
         'entity_translation_sync' => FALSE,
+        'max_length' => 255,
       ),
       'translatable' => '1',
       'type' => 'text',
@@ -422,9 +423,9 @@ function humanitarianresponse_coordination_field_default_fields() {
       'label' => 'Name',
       'required' => TRUE,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'text_processing' => 0,
         'user_register_form' => FALSE,
-        'entity_translation_sync' => FALSE,
       ),
       'widget' => array(
         'module' => 'text',
@@ -440,7 +441,6 @@ function humanitarianresponse_coordination_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Description');
   t('Email');
   t('Location');
   t('Map');
