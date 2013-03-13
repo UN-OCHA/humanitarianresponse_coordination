@@ -360,6 +360,130 @@ function humanitarianresponse_coordination_views_default_views() {
     'default' => 0,
     'block' => 0,
   );
+
+  /* Display: CSV */
+  $handler = $view->new_display('views_data_export', 'CSV', 'views_data_export_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+  $handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+  $handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+  $handler->display->display_options['fields']['name_field']['alter']['path'] = 'taxonomy/term/[tid]';
+  $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+  /* Field: Taxonomy term: Telephone */
+  $handler->display->display_options['fields']['field_hub_phone']['id'] = 'field_hub_phone';
+  $handler->display->display_options['fields']['field_hub_phone']['table'] = 'field_data_field_hub_phone';
+  $handler->display->display_options['fields']['field_hub_phone']['field'] = 'field_hub_phone';
+  /* Field: Taxonomy term: Email */
+  $handler->display->display_options['fields']['field_hub_email']['id'] = 'field_hub_email';
+  $handler->display->display_options['fields']['field_hub_email']['table'] = 'field_data_field_hub_email';
+  $handler->display->display_options['fields']['field_hub_email']['field'] = 'field_hub_email';
+  $handler->display->display_options['fields']['field_hub_email']['type'] = 'email_plain';
+  /* Field: Taxonomy term: Location */
+  $handler->display->display_options['fields']['field_hub_location']['id'] = 'field_hub_location';
+  $handler->display->display_options['fields']['field_hub_location']['table'] = 'field_data_field_hub_location';
+  $handler->display->display_options['fields']['field_hub_location']['field'] = 'field_hub_location';
+  $handler->display->display_options['fields']['field_hub_location']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_hub_address_1']['id'] = 'field_hub_address_1';
+  $handler->display->display_options['fields']['field_hub_address_1']['table'] = 'field_data_field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_1']['field'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_1']['label'] = 'Address 1';
+  $handler->display->display_options['fields']['field_hub_address_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hub_address_1']['alter']['text'] = '[field_hub_address_1-thoroughfare]';
+  $handler->display->display_options['fields']['field_hub_address_1']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_hub_address_1']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(
+      'address' => 'address',
+    ),
+  );
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_hub_address_2']['id'] = 'field_hub_address_2';
+  $handler->display->display_options['fields']['field_hub_address_2']['table'] = 'field_data_field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_2']['field'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_2']['label'] = 'Address 2';
+  $handler->display->display_options['fields']['field_hub_address_2']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hub_address_2']['alter']['text'] = '[field_hub_address_2-premise]';
+  $handler->display->display_options['fields']['field_hub_address_2']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_hub_address_2']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(
+      'address' => 'address',
+    ),
+  );
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_hub_address_3']['id'] = 'field_hub_address_3';
+  $handler->display->display_options['fields']['field_hub_address_3']['table'] = 'field_data_field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_3']['field'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_3']['label'] = 'City';
+  $handler->display->display_options['fields']['field_hub_address_3']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hub_address_3']['alter']['text'] = '[field_hub_address_3-locality]';
+  $handler->display->display_options['fields']['field_hub_address_3']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_hub_address_3']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(
+      'address' => 'address',
+    ),
+  );
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_hub_address_4']['id'] = 'field_hub_address_4';
+  $handler->display->display_options['fields']['field_hub_address_4']['table'] = 'field_data_field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_4']['field'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_4']['label'] = 'State';
+  $handler->display->display_options['fields']['field_hub_address_4']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hub_address_4']['alter']['text'] = '[field_hub_address_4-administrative_area]';
+  $handler->display->display_options['fields']['field_hub_address_4']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_hub_address_4']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(
+      'address' => 'address',
+    ),
+  );
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_hub_address_5']['id'] = 'field_hub_address_5';
+  $handler->display->display_options['fields']['field_hub_address_5']['table'] = 'field_data_field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_5']['field'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address_5']['label'] = 'Postal Code';
+  $handler->display->display_options['fields']['field_hub_address_5']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hub_address_5']['alter']['text'] = '[field_hub_address_5-postal_code]';
+  $handler->display->display_options['fields']['field_hub_address_5']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_hub_address_5']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(
+      'address' => 'address',
+    ),
+  );
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_hub_address']['id'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address']['table'] = 'field_data_field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address']['field'] = 'field_hub_address';
+  $handler->display->display_options['fields']['field_hub_address']['label'] = 'Country';
+  $handler->display->display_options['fields']['field_hub_address']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_hub_address']['alter']['text'] = '[field_hub_address-country]';
+  $handler->display->display_options['fields']['field_hub_address']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_hub_address']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(
+      'address' => 'address',
+    ),
+  );
+  $handler->display->display_options['path'] = 'coordination/coordination-hubs.csv';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block' => 0,
+  );
   $translatables['coordination_hubs'] = array(
     t('Master'),
     t('Coordination Hubs'),
@@ -393,6 +517,7 @@ function humanitarianresponse_coordination_views_default_views() {
     t('Country'),
     t('[field_hub_address-country]'),
     t('XML'),
+    t('CSV'),
   );
   $export['coordination_hubs'] = $view;
 
