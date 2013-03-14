@@ -10,7 +10,7 @@
 function humanitarianresponse_coordination_taxonomy_default_vocabularies() {
   return array(
     'coordination_hubs' => array(
-      'name' => 'Coordination Hubs',
+      'name' => 'Office',
       'machine_name' => 'coordination_hubs',
       'description' => '',
       'hierarchy' => '0',
