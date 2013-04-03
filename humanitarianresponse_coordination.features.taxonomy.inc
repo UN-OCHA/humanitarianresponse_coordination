@@ -13,9 +13,9 @@ function humanitarianresponse_coordination_taxonomy_default_vocabularies() {
       'name' => 'Office',
       'machine_name' => 'coordination_hubs',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
