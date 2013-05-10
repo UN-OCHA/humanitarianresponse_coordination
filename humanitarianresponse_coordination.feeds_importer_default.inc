@@ -34,7 +34,7 @@ function humanitarianresponse_coordination_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsTermProcessor',
       'config' => array(
-        'vocabulary' => 'coordination_hubs',
+        'bundle' => 'coordination_hubs',
         'mappings' => array(
           0 => array(
             'source' => 'Name',
