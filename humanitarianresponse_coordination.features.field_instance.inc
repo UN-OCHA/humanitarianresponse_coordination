@@ -23,9 +23,8 @@ function humanitarianresponse_coordination_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'ical' => array(
@@ -162,9 +161,9 @@ function humanitarianresponse_coordination_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'hs_taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hs_taxonomy_term_reference_hierarchical_text',
         'weight' => 5,
       ),
       'ical' => array(
@@ -302,9 +301,8 @@ function humanitarianresponse_coordination_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'ical' => array(
