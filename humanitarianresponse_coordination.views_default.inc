@@ -90,7 +90,7 @@ function humanitarianresponse_coordination_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'coordination/coordination-hubs';
+  $handler->display->display_options['path'] = 'coordination-hubs';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -232,7 +232,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination/coordination-hubs.xls';
+  $handler->display->display_options['path'] = 'coordination-hubs.xls';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -354,7 +354,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination/coordination-hubs.xml';
+  $handler->display->display_options['path'] = 'coordination-hubs.xml';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -478,7 +478,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination/coordination-hubs.csv';
+  $handler->display->display_options['path'] = 'coordination-hubs.csv';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
