@@ -10,7 +10,7 @@
 function humanitarianresponse_coordination_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer coordination_hubs vocabulary terms.
+  // Exported permission: 'administer coordination_hubs vocabulary terms'.
   $permissions['administer coordination_hubs vocabulary terms'] = array(
     'name' => 'administer coordination_hubs vocabulary terms',
     'roles' => array(
@@ -20,7 +20,7 @@ function humanitarianresponse_coordination_user_default_permissions() {
     'module' => 'vppr',
   );
 
-  // Exported permission: clear csv_coordination_hubs feeds.
+  // Exported permission: 'clear csv_coordination_hubs feeds'.
   $permissions['clear csv_coordination_hubs feeds'] = array(
     'name' => 'clear csv_coordination_hubs feeds',
     'roles' => array(
@@ -30,7 +30,7 @@ function humanitarianresponse_coordination_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: import csv_coordination_hubs feeds.
+  // Exported permission: 'import csv_coordination_hubs feeds'.
   $permissions['import csv_coordination_hubs feeds'] = array(
     'name' => 'import csv_coordination_hubs feeds',
     'roles' => array(
@@ -40,7 +40,7 @@ function humanitarianresponse_coordination_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: unlock csv_coordination_hubs feeds.
+  // Exported permission: 'unlock csv_coordination_hubs feeds'.
   $permissions['unlock csv_coordination_hubs feeds'] = array(
     'name' => 'unlock csv_coordination_hubs feeds',
     'roles' => array(
