@@ -38,19 +38,12 @@ function humanitarianresponse_coordination_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['content'] = 'There are no coordination hubs';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
-  /* Field: Taxonomy term: Term ID */
-  $handler->display->display_options['fields']['tid']['id'] = 'tid';
-  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['tid']['field'] = 'tid';
-  $handler->display->display_options['fields']['tid']['label'] = '';
-  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
   $handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
   $handler->display->display_options['fields']['name_field']['field'] = 'name_field';
-  $handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name_field']['alter']['path'] = 'taxonomy/term/[tid]';
+  $handler->display->display_options['fields']['name_field']['link_to_entity'] = 1;
   /* Field: Taxonomy term: Telephone */
   $handler->display->display_options['fields']['field_hub_phone']['id'] = 'field_hub_phone';
   $handler->display->display_options['fields']['field_hub_phone']['table'] = 'field_data_field_hub_phone';
@@ -102,13 +95,6 @@ function humanitarianresponse_coordination_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Term ID */
-  $handler->display->display_options['fields']['tid']['id'] = 'tid';
-  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['tid']['field'] = 'tid';
-  $handler->display->display_options['fields']['tid']['label'] = '';
-  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
   $handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
@@ -117,6 +103,7 @@ function humanitarianresponse_coordination_views_default_views() {
   $handler->display->display_options['fields']['name_field']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['name_field']['alter']['path'] = 'taxonomy/term/[tid]';
   $handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_field']['link_to_entity'] = 1;
 
   /* Display: XLS */
   $handler = $view->new_display('views_data_export', 'XLS', 'xls');
@@ -232,7 +219,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination-hubs.xls';
+  $handler->display->display_options['path'] = 'coordination-hubs/xls';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -354,7 +341,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination-hubs.xml';
+  $handler->display->display_options['path'] = 'coordination-hubs/xml';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -478,7 +465,7 @@ function humanitarianresponse_coordination_views_default_views() {
       'address' => 'address',
     ),
   );
-  $handler->display->display_options['path'] = 'coordination-hubs.csv';
+  $handler->display->display_options['path'] = 'coordination-hubs/csv';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -494,8 +481,6 @@ function humanitarianresponse_coordination_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('There are no coordination hubs'),
-    t('.'),
-    t(','),
     t('Name'),
     t('Telephone'),
     t('Email'),
